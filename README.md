@@ -58,8 +58,10 @@ boundAddText('having fun');
 
 
 ## Thunks
-1. Create an action creator that returns a function(dispatch,getState){}
-2. Example:
+1. Create an action creator that returns a function(dispatch,getState)
+2. Chain dispatches and promises, such as calls to the server
+3. Maintain synchronous flow through your Redux app
+4. Example:
 ```
 function makeSandwichesForEverybody() {
   return function (dispatch, getState) {
