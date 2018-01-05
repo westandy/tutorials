@@ -16,7 +16,6 @@
 
 ### Action Creators
 1. Functions that create actions
-2. Use: Redux 'dispatches' actions created by an action creator
 3. Simple Example:
 ```
 function addText(text) {
@@ -26,7 +25,11 @@ function addText(text) {
    };
 }
 ```
-4. Flux Example:
+4. Redux Example - Encourages pure functions
+```
+dispatch(addText(text));
+```
+5. Flux Example - NOT a pure function:
 ```
 function dispatchAddTextAction(text) {
   const action = {
@@ -35,10 +38,6 @@ function dispatchAddTextAction(text) {
   };
   dispatch(action);
 }
-```
-5. Redux Example - keeps dispatch separate from the action creator, through composition
-```
-dispatch(addText(text));
 ```
 6. Bound action creators
 ```
