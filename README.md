@@ -105,5 +105,13 @@ console.log(gen.next().value); // 1
 console.log(gen.next().value); // 2
 console.log(gen.next().value); // undefined
 ```
-3. Like thunks, we can handle complicated asynchronous sequences, but in "generator" 
-4. May be more complicated to understand
+3. Like thunks, we can handle complicated asynchronous sequences, but in "generator" style
+4. Generators are more complicated to understand, but your code may become cleaner as a result
+
+
+## Epics
+1. Create an action creator that returns an observable of actions
+2. Observable Example:
+```
+doObservable()
+```
