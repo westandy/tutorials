@@ -86,3 +86,24 @@ function makeSandwichesForEverybody() {
   };
 }
 ```
+
+
+## Sagas
+1. Create an action creator that returns a function generator
+2. Generator Example:
+```
+function* counter() {
+  const index = 0;
+  while (index < 3)
+    yield index++;
+}
+
+const gen = counter();
+
+console.log(gen.next().value); // 0
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // undefined
+```
+3. Like thunks, we can handle complicated asynchronous sequences, but in "generator" 
+4. May be more complicated to understand
