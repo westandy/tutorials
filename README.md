@@ -46,8 +46,14 @@ const boundAddText = text => dispatch(addText(text));
 boundAddText('having fun');
 ```
 
+## Actions and Action Creators Recap
+1. Synchronous flow of actions - important!
+2. Encourage 'pure' functions (action creators) and good functional programming (composition)
 
 
-#Thunks -> simple, ‘impure reducers’
-Epics -> Actions In, Actions Out, requires understanding of Observables/RxJS
+## Thunks, Sagas, Epics - Redux Middleware
+1. Allows asynchronous actions in Redux
+2. Thunks - allows action creators that return functions
+3. Sagas - allows action creators that return function generators
+4. Epics - allows action creators to return functions that return observables
 
