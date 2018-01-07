@@ -118,9 +118,9 @@ doObservable()
 
 
 # References
-1. Actions and Creators - https://redux.js.org/docs/basics/Actions.html
-2. Thunks - https://github.com/gaearon/redux-thunk
-3. Generators - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
-4. Redux Sagas - https://redux-saga.js.org/docs/introduction/
-5. Observables - http://reactivex.io/intro.html
-6. Redux Epics - https://redux-observable.js.org/docs/basics/Epics.html
+- Actions and Creators - https://redux.js.org/docs/basics/Actions.html
+- Thunks - https://github.com/gaearon/redux-thunk
+- Generators - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
+- Redux Sagas - https://redux-saga.js.org/docs/introduction/
+- Observables - http://reactivex.io/intro.html
+- Redux Epics - https://redux-observable.js.org/docs/basics/Epics.html
