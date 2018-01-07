@@ -115,3 +115,10 @@ console.log(gen.next().value); // undefined
 ```
 doObservable()
 ```
+
+
+# References
+1. Actions and Creators - https://redux.js.org/docs/basics/Actions.html
+2. Thunks - https://github.com/gaearon/redux-thunk
+3. Generators - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
+4. Redux Sagas - https://redux-saga.js.org/docs/introduction/
