@@ -1,5 +1,10 @@
 # Thunks, Sagas, and Epics, oh my!
 
+## Redux
+1. Flow is synchronous
+2. Thunks, Sagas, and Epics (and Promises) are middleware for Redux
+3. Handle asychronous actions or side effects
+
 ## Redux Basics - Actions and Action Creators
 
 ### Actions
@@ -127,3 +132,4 @@ doObservable()
 - Redux Sagas - https://redux-saga.js.org/docs/introduction/
 - Observables - http://reactivex.io/intro.html
 - Redux Epics - https://redux-observable.js.org/docs/basics/Epics.html
+- A Better Explanation - https://medium.com/react-native-training/redux-4-ways-95a130da0cdc
