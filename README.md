@@ -117,7 +117,14 @@ console.log(gen.next().value); // undefined
 1. Create an action creator that returns an observable of actions
 2. Observable Example:
 ```
-doObservable()
+const startTicking = (actions, store) => 
+  Observable.interval(1000)
+    .map((i) => ({ type: 'TICK', i }))
+    .takeUntil(actions.ofType('STOP_TICK'));
+dispatch(startTicking);
+
+// to stop the ticking actions at a later point
+dispatch({ type: 'STOP_TICK' });
 ```
 3. Like thunks and sagas, we can handle complicated asynchronous sequences, but in "observable" style
 
