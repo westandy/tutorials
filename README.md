@@ -1,22 +1,5 @@
 # Thunks, Sagas, and Epics, oh my!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Redux Basics - Actions and Action Creators
 
 ### Actions
