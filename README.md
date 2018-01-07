@@ -11,7 +11,7 @@
 1. Simple JS Objects
 2. Requires a 'type' property
 3. Example: 
-```
+```javascript
 {
    type: ‘ADD’,
    payload: data
@@ -22,7 +22,7 @@
 ### Action Creators
 1. Functions that create actions
 3. Simple Example:
-```
+```javascript
 function addText(text) {
    return {
       type: 'ADD_TEXT',
@@ -31,11 +31,11 @@ function addText(text) {
 }
 ```
 4. Redux Example - Encourages pure functions
-```
+```javascript
 dispatch(addText(text));
 ```
 5. Flux Example - NOT a pure function:
-```
+```javascript
 function dispatchAddTextAction(text) {
   const action = {
     type: 'ADD_TEXT',
@@ -45,7 +45,7 @@ function dispatchAddTextAction(text) {
 }
 ```
 6. Bound action creators
-```
+```javascript
 const boundAddText = text => dispatch(addText(text));
 boundAddText('having fun');
 ```
@@ -67,7 +67,7 @@ boundAddText('having fun');
 2. Chain dispatches and promises, such as calls to the server
 3. Maintain synchronous flow through your Redux app
 4. Example:
-```
+```javascript
 function makeSandwichesForEverybody() {
   return function (dispatch, getState) {
     // We can dispatch both plain object actions and other thunks,
@@ -96,7 +96,7 @@ function makeSandwichesForEverybody() {
 ## Sagas
 1. Create an action creator that returns a function generator
 2. Generator Example:
-```
+```javascript
 function* counter() {
   const index = 0;
   while (index < 3)
@@ -116,7 +116,7 @@ console.log(gen.next().value); // undefined
 ## Epics
 1. Create an action creator that returns an observable of actions
 2. Observable Example:
-```
+```javascript
 const startTicking = (actions, store) => 
   Observable.interval(1000)
     .map((i) => ({ type: 'TICK', i }))
