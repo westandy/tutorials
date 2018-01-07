@@ -107,6 +107,8 @@ console.log(gen.next().value); // undefined
 ```
 3. Like thunks, we can handle complicated asynchronous sequences, but in "generator" style
 4. Generators are more complicated to understand, but your code may become cleaner as a result
+5. Saga 
+- long lived transaction that can be written as a sequence of transactions that can be interleaved
 
 
 ## Epics
@@ -121,6 +123,7 @@ doObservable()
 - Actions and Creators - https://redux.js.org/docs/basics/Actions.html
 - Thunks - https://github.com/gaearon/redux-thunk
 - Generators - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
+- Sagas - https://www.youtube.com/watch?v=xDuwrtwYHu8
 - Redux Sagas - https://redux-saga.js.org/docs/introduction/
 - Observables - http://reactivex.io/intro.html
 - Redux Epics - https://redux-observable.js.org/docs/basics/Epics.html
