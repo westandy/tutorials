@@ -111,9 +111,6 @@ console.log(gen.next().value); // 2
 console.log(gen.next().value); // undefined
 ```
 3. Like thunks, we can handle complicated asynchronous sequences, but in "generator" style
-4. Generators are more complicated to understand, but your code may become cleaner as a result
-5. Saga 
-    *  Long lived transaction that can be written as a sequence of transactions that can be interleaved
 
 
 ## Epics
@@ -122,6 +119,7 @@ console.log(gen.next().value); // undefined
 ```
 doObservable()
 ```
+3. Like thunks and sagas, we can handle complicated asynchronous sequences, but in "observable" style
 
 
 # References
