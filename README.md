@@ -108,6 +108,7 @@ console.log(gen.next().value); // undefined
 3. Like thunks, we can handle complicated asynchronous sequences, but in "generator" style
 4. Generators are more complicated to understand, but your code may become cleaner as a result
 5. Saga 
+
    * long lived transaction that can be written as a sequence of transactions that can be interleaved
 
 
