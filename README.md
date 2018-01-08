@@ -56,9 +56,9 @@ boundAddText('having fun');
 
 ## Thunks, Sagas, Epics - Redux Middleware
 1. Allows asynchronous actions in Redux
-2. Thunks - allows action creators that return functions
-3. Sagas - allows action creators that return function generators
-4. Epics - allows action creators to return functions that return observables
+2. Thunks - instead of actions creatores, return functions
+3. Sagas - instead of actions creatores, return function generators
+4. Epics - instead of actions creatores, return functions that return observables
 
 
 ## Thunks
