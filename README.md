@@ -2,7 +2,7 @@
 
 ## Redux
 1. Flow is synchronous
-2. Thunks, Sagas, and Epics (and Promises) are middleware for Redux to handle asychronous actions or "side effects"
+2. UIs require asychronous actions or "side effects" sometimes
 
 ## Redux Basics - Actions and Action Creators
 
