@@ -16,7 +16,7 @@
    payload: data
 }
 ```
-4. Use: redux 'dispatches' actions to reducers to change state
+4. We use Redux to 'dispatch' actions to reducers to change state
 
 ### Action Creators
 1. Functions that create actions
