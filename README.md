@@ -110,6 +110,7 @@ console.log(gen.next().value); // 2
 console.log(gen.next().value); // undefined
 ```
 3. Like thunks, we can handle complicated asynchronous sequences, but in "generator" style
+4. Sagas allow a cleaner way, than Thunks, to handle side effects and errors, and return the original state
 
 
 ## Epics
@@ -126,6 +127,7 @@ dispatch(startTicking);
 dispatch({ type: 'STOP_TICK' });
 ```
 3. Like thunks and sagas, we can handle complicated asynchronous sequences, but in "observable" style
+4. Epics, like Sagas, allow a cleaner way to handle side effects and errors, and return the original state
 
 
 # References
