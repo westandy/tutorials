@@ -71,15 +71,10 @@ function makeSandwichesForEverybody() {
   return function (dispatch, getState) {
     // We can dispatch both plain object actions and other thunks,
     // which lets us compose the asynchronous actions in a single flow.
-
-    return dispatch(
-      makeASandwichWithSecretSauce('My Grandma')
-    ).then(() =>
-      Promise.all([
+    return Promise.all([
         dispatch(makeASandwichWithSecretSauce('Me')),
         dispatch(makeASandwichWithSecretSauce('Friend'))
-      ])
-    ).then(() =>
+    ]).then(() =>
       dispatch(makeASandwichWithSecretSauce('Our neighbors'))
     ).then(() =>
       dispatch(getState().myMoney > 42 ?
