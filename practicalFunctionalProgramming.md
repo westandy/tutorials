@@ -6,7 +6,9 @@
    - see `map, filter, reduce`
 2) Lambda functions 
    - nameless functions to give higher order functions
-3) Pipelines/Chaining - using functions as building blocks, we create 'chains' of methods:
+   
+## Pipelines/Chaining
+- using functions as building blocks, we create 'chains' of methods:
 ```javascript
 return someData.json().cleanup(...).filter(...).map(...).doSomething().finalizeTheData();
 ```
