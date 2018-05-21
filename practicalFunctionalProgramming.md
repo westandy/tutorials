@@ -246,7 +246,8 @@ return someListOfData.reduce((accumulator,data) => accumulate(data),[]);
 1) For the higher-order functions, the existing list is not modified, and the new data is created when it is needed 
 2) Mutating data opens us up for bugs, in the same vein as do stateful components, objects, services, etc. do
 3) Functions that do not mutate their parameters are easy to test
-4) Why else would we care?
+4) Immutability makes our methods and application deterministic
+5) Why else would we care?
 
 
 ## References
