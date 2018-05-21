@@ -127,9 +127,10 @@ console.log(comp.render()); // My Props: yeah!, My State: 0
 2) ```javascript map``` - create a new array of apples from an array of oranges
 3) ```javascript reduce``` - create a new elephant from a list of mice
 
+#### This is why we care:
 In all cases, the existing list is not modified, and the new data is created when it is needed. 
 
-An example:
+#### An Example:
 
 ##### Non-Functional Approach:
 ```javascript
