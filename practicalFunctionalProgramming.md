@@ -81,3 +81,17 @@ console.log(comp()); // This is printing out props: yeah!
 3) ```javascript reduce``` - create a new elephant from a list of mice
 
 In all cases, the existing list is not modified, and the new data is created when it is needed. 
+
+An example:
+
+```javascript
+// Not Functional Approach:
+let someArray = [];
+
+   ...
+   someArray.push(...someData);
+   ...
+
+return someArray = [];
+
+```
