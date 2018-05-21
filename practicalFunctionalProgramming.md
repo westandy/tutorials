@@ -167,18 +167,47 @@ console.log('Oranges',oranges); // ['red naval','red naval','red naval']
  
 ```javascript
 ...
-someOnClickMethod(someData,someOtherData) {
+someOnClickMethod(someData,propData) {
   ...
 }
 
 render() {
   ...
-  onClick={(e) => {this.someOnClickMethod(e.someData,someOtherData);}}
+  onClick={(e) => {this.someOnClickMethod(e.someData,this.props.data);}}
   ...
 }
 ```
 
 ## Currying 
+- You apply a parameter one at a time to a function
+- Turn a Single Function with many parameters into a many functions each with a single parameter
+
+### First Example
+```javascript
+function curry2(func) {
+  return function(secondArg) {
+    return function(firstArg) {
+      return func(firstArg, secondArg);
+    };
+  };
+}
+const parseBinary = curry2(parseInt)(2);
+
+console.log(parseBinary('111'));  // 7
+console.log(parseBinary('10'));   // 2
+```
+
+### Second Example
+
+```javascript
+function curry(func) {
+  return function(arg) {
+    return func(arg);
+  };
+}
+console.log(['11', '11', '11', '11'].map(parseInt));         // [ 11, NaN, 3, 4 ]
+console.log(['11', '11', '11', '11'].map(curry(parseInt)));  // [ 11, 11, 11, 11 ]
+```
 
 ## Immutable Data
 - Seriously, why do we care? 
