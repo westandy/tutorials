@@ -1,10 +1,12 @@
 # Practical Functional Programming
-
-1) All of these concepts can be used in any language, and in some cases, can be the cleaner, less verbose approach.  
-2) What I Plan to Cover:
+  
+1) What I Plan to Cover:
    - Briefly: Higher Order Functions, Chaining, Pipelines
    - Not-So-Briefly: Closures, Partial Application, Currying, Immutable Data
-   - Not Covered: **Recursion**
+2) What I Do **Not** Plan to Cover:
+   - Redux
+   - Recursion
+   - Formal definitions of functional concepts
 
 ## Familiar Functional Concepts:
 1) Functions as Building Blocks
@@ -184,7 +186,7 @@ render() {
 
 ## Currying 
 - You apply a parameter one at a time to a function
-- Turn a Single Function with many parameters into a many functions each with a single parameter
+- Turn a single function with many parameters into a many functions each with a single parameter
 
 ### First Example
 ```javascript
