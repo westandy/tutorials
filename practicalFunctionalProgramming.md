@@ -1,5 +1,7 @@
 # Practical Functional Programming
 
+- All of these concepts can be used in any languages, and in some cases, can be the cleaner, less verbose approach.  
+
 ## Familiar Functional Concepts:
 1) Functions as Building Blocks
    - Functions that are simple blocks for building larger blocks (functions), that do not mutate their parameters, are easy to test.  
@@ -127,6 +129,7 @@ comp.decrement();
 console.log(comp.render()); // My Props: yeah!, My State: 0
 ```
 ## Partial Application
+- You apply some of the required parameters of a function and return a function that takes the rest of the parameters.
 
 ## Currying 
 
