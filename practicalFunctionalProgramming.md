@@ -1,21 +1,15 @@
 # Practical Functional Programming
 
-## Clarity
-```javascript
-const list = ['a','b','c','d'];
-
-const first = list[0]; // imperative
-
-const firstElem = firstElement(list); // declarative
-```
-
 ## Familiar Functional Concepts:
 1) Higher Order Functions 
    - functions that take functions as arguments
    - see `map, filter, reduce`
 2) Lambda functions 
    - nameless functions to give higher order functions
-3) We see this in both JavaScript and C# (and many other languages)
+3) Pipelines/Chaining - using functions as building blocks, we create 'chains' of methods:
+```javascript
+return someData.json().cleanup(...).filter(...).map(...).doSomething().finalizeTheData();
+```
 
 ## Closures 
 - Bind data or methods to a function only to use them later 
