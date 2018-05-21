@@ -101,3 +101,11 @@ return someArray = [];
 return someListOfData.reduce((accumulator,data) => accumulator = accumulate(data),[]);
 ```
 
+
+
+# References
+- React Components & createReactClass - https://reactjs.org/docs/react-without-es6.html
+- A Practical Introduction to Functional Programming - https://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
+- Functional JavaScript by Michael Fogus
+- Understanding JavaScript Closures - http://javascriptissexy.com/understand-javascript-closures-with-ease/
+- Closures, Partial Application and Currying: Effective Functional JavaScript - https://hackernoon.com/ingredients-of-effective-functional-javascript-closures-partial-application-and-currying-66afe055102a
