@@ -185,6 +185,7 @@ render() {
 ```
 
 ## Currying 
+- Generalization of Partial Application
 - You apply a parameter one at a time to a function
 - Turn a single function with many parameters into a many functions each with a single parameter
 
