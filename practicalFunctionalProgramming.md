@@ -138,18 +138,18 @@ console.log(comp.render()); // My Props: yeah!, My State: 0
 3) ```javascript reduce``` - create a new elephant from a list of mice
 
 ### This is why we care:
-In all cases, the existing list is not modified, and the new data is created when it is needed. 
+1) For the higher-order functions, the existing list is not modified, and the new data is created when it is needed.
+2) Mutating data opens us up for bugs, in the same vein as do stateful components, objects, services, etc. do. 
 
 ### An Example:
 
 #### Non-Functional Approach:
 ```javascript
 let someArray = [];
-
+   ... 
+   someListOfData...
+   someArray.push(...data);
    ...
-   someArray.push(...someData);
-   ...
-
 return someArray = [];
 ```
 
