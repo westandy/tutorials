@@ -44,8 +44,10 @@ const MyFunctionalComponent = (props = {stuff:''}) => {
 }
 const comp = MyFunctionalComponent({stuff:'yeah!'});
 console.log(comp()); // This is printing out props: yeah!
+```
 
-### ClassComponent
+### ClassComponent:
+```javascript
 function MyClassComponent (props = {stuff:''}) {
    // Constructor :
    if ( !(this instanceof MyClassComponent) ) {
