@@ -145,6 +145,10 @@ console.log('Oranges',oranges); // ['red naval','red naval','red naval']
 
 ### With PA
 ```javascript
+function turnArrayInto(func = () => {},list = []) {
+        return list.map(func);
+}
+
 function partialTurnArrayInto(func) {
         return function(list) {
                 return turnArrayInto(func,list);
@@ -155,6 +159,22 @@ const orangeFunc = item => 'red naval';
 const turnIntoOranges = partialTurnArrayInto(orangeFunc);
 const oranges = turnIntoOranges(apples);
 console.log('Oranges',oranges); // ['red naval','red naval','red naval']
+```
+
+### PA In React
+
+ - we use it in event handlers in our render methods:
+```javascript
+...
+someOnClickMethod(someData,someOtherData) {
+  ...
+}
+
+render() {
+  ...
+  onClick={(e) => this.someOnClickMethod(e.someData,someOtherData)}
+  ...
+}
 ```
 
 ## Currying 
