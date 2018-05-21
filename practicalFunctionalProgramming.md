@@ -1,10 +1,10 @@
 # Practical Functional Programming
 
-- All of these concepts can be used in any languages, and in some cases, can be the cleaner, less verbose approach.  
-- What I Plan to Cover:
-   1) Briefly: Higher Order Functions, Chaining, Pipelines
-   2) Not-So-Briefly: Closures, Partial Application, Currying, Immutable Data
-   3) Not Covered - **Recursion**
+1) All of these concepts can be used in any languages, and in some cases, can be the cleaner, less verbose approach.  
+2) What I Plan to Cover:
+   - Briefly: Higher Order Functions, Chaining, Pipelines
+   - Not-So-Briefly: Closures, Partial Application, Currying, Immutable Data
+   - Not Covered: **Recursion**
 
 ## Familiar Functional Concepts:
 1) Functions as Building Blocks
