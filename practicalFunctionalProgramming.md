@@ -70,3 +70,14 @@ function MyClassComponent (props = {stuff:''}) {
 const comp = new MyClassComponent({stuff:'yeah!'});
 console.log(comp()); // This is printing out props: yeah!
 ```
+
+## Immutable Data
+- Seriously, why do we care? 
+
+- Remember those higher order functions?
+
+1) ```javascript filter``` - create a new list with equal or fewer items
+2) ```javascript map``` - create a new array of apples from an array of oranges
+3) ```javascript reduce``` - create a new elephant from a list of mice
+
+In all cases, the existing list is not modified, and the new data is created when it is needed. 
