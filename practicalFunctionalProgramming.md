@@ -189,12 +189,6 @@ render() {
 2) ```javascript map``` - create a new array of apples from an array of oranges
 3) ```javascript reduce``` - create a new elephant from a list of mice
 
-### This is why we care:
-1) For the higher-order functions, the existing list is not modified, and the new data is created when it is needed.
-2) Mutating data opens us up for bugs, in the same vein as do stateful components, objects, services, etc. do. 
-3) Functions that do not mutate their parameters are easy to test.
-
-
 ### An Example:
 
 #### Non-Functional Approach:
@@ -207,12 +201,16 @@ let someArray = [];
 return someArray = [];
 ```
 
-
 #### Functional Approach:
 ```javascript
 return someListOfData.reduce((accumulator,data) => accumulator = accumulate(data),[]);
 ```
 
+### Some Reasons why we may care about Immutable Data (not-exhaustive):
+1) For the higher-order functions, the existing list is not modified, and the new data is created when it is needed 
+2) Mutating data opens us up for bugs, in the same vein as do stateful components, objects, services, etc. do
+3) Functions that do not mutate their parameters are easy to test
+4) Why else would we care?
 
 
 ## References
