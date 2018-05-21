@@ -84,8 +84,8 @@ In all cases, the existing list is not modified, and the new data is created whe
 
 An example:
 
+##### Non-Functional Approach:
 ```javascript
-// Not Functional Approach:
 let someArray = [];
 
    ...
@@ -93,5 +93,11 @@ let someArray = [];
    ...
 
 return someArray = [];
-
 ```
+
+
+##### Functional Approach:
+```javascript
+return someListOfData.reduce((accumulator,data) => accumulator = accumulate(data),[]);
+```
+
