@@ -1,10 +1,12 @@
 # Practical Functional Programming
 
 ## Familiar Functional Concepts:
-1) Higher Order Functions 
+1) Functions as Building Blocks
+   - Functions that are simple blocks for building larger blocks (functions), that do not mutate their parameters, are easy to test.  
+2) Higher Order Functions 
    - functions that take functions as arguments
    - see `map, filter, reduce`
-2) Lambda functions 
+3) Lambda functions 
    - nameless functions to give higher order functions
    
 ## Chaining
@@ -140,6 +142,8 @@ console.log(comp.render()); // My Props: yeah!, My State: 0
 ### This is why we care:
 1) For the higher-order functions, the existing list is not modified, and the new data is created when it is needed.
 2) Mutating data opens us up for bugs, in the same vein as do stateful components, objects, services, etc. do. 
+3) Functions that do not mutate their parameters are easy to test.
+
 
 ### An Example:
 
