@@ -239,7 +239,7 @@ return someArray = [];
 
 #### Functional Approach:
 ```javascript
-return someListOfData.reduce((accumulator,data) => accumulator = accumulate(data),[]);
+return someListOfData.reduce((accumulator,data) => accumulate(data),[]);
 ```
 
 ### Some Reasons why we may care about Immutable Data (not-exhaustive):
