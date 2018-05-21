@@ -67,16 +67,16 @@ function MyClassComponent (props = {stuff:''}) {
    return this.render;
 }
 
-const comp = new MyClassComponent({stuff:'yeah!'});
+const comp = /*new*/ MyClassComponent({stuff:'yeah!'});
 console.log(comp()); // This is printing out props: yeah!
 ```
 
 ### My Stateful Class Component
 ```javascript
-function MyClassComponent (props = {stuff:''}) {
+function MyStatefulClassComponent (props = {stuff:''}) {
    // Constructor :
-   if ( !(this instanceof MyClassComponent) ) {
-        return new MyClassComponent(props);
+   if ( !(this instanceof MyStatefulClassComponent) ) {
+        return new MyStatefulClassComponent(props);
    }
 
    this.props = props;
@@ -108,7 +108,7 @@ function MyClassComponent (props = {stuff:''}) {
    };
 }
 
-const comp = new MyClassComponent({stuff:'yeah!'});
+const comp = /*new*/ MyStatefulClassComponent({stuff:'yeah!'});
 console.log(comp.render()); // My Props: yeah!, My State: 0
 
 comp.increment();
