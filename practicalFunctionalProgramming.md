@@ -34,7 +34,7 @@ console.log(answer); // 2
 
 ## React and Closures
 
-### Functional Component:
+### Stateless Functional Component:
 ```javascript
 const MyFunctionalComponent = (props = {stuff:''}) => {
    return function () { // render
@@ -46,7 +46,7 @@ const comp = MyFunctionalComponent({stuff:'yeah!'});
 console.log(comp()); // This is printing out props: yeah!
 ```
 
-### Class Component:
+### Stateless Class Component:
 ```javascript
 function MyClassComponent (props = {stuff:''}) {
    // Constructor :
@@ -69,6 +69,53 @@ function MyClassComponent (props = {stuff:''}) {
 
 const comp = new MyClassComponent({stuff:'yeah!'});
 console.log(comp()); // This is printing out props: yeah!
+```
+
+### My Stateful Class Component
+```javascript
+function MyClassComponent (props = {stuff:''}) {
+   // Constructor :
+   if ( !(this instanceof MyClassComponent) ) {
+        return new MyClassComponent(props);
+   }
+
+   this.props = props;
+   this.state = { count: 0 };
+   // End Constructor
+
+   this.increment = () => {
+      this.state.count++;
+   };
+   this.increment = this.increment.bind(this);
+
+   this.decrement = () => {
+      this.state.count--;
+   };
+   this.decrement = this.decrement.bind(this);
+
+   this.render = function() {
+      const {stuff} = this.props;
+      const {count} = this.state;
+      return `My Props: ${stuff}, My State: ${this.state.count} `;
+   }
+   this.render = this.render.bind(this);
+
+   // Render method
+   return {
+      render:this.render,
+      increment:this.increment,
+      decrement:this.decrement
+   };
+}
+
+const comp = new MyClassComponent({stuff:'yeah!'});
+console.log(comp.render()); // My Props: yeah!, My State: 0
+
+comp.increment();
+console.log(comp.render()); // My Props: yeah!, My State: 1
+
+comp.decrement();
+console.log(comp.render()); // My Props: yeah!, My State: 0
 ```
 
 ## Immutable Data
