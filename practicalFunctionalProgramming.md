@@ -30,7 +30,7 @@ const answer = divideBy10(20);
 console.log(answer); // 2
 ```
 
-- In this example, we bind 10 to `d` when we create the function `divideBy10`.  We can say `10` is "closed" to `divideBy10`.
+- In this example, we "bind" `10` to `d` when we create the function `divideBy10`.  We can say `10` is "closed" to `divideBy10`.
 
 ## React and Closures
 
