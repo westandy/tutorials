@@ -9,9 +9,12 @@
    
 ## Chaining
 - using functions as building blocks, we create 'chains' of methods:
+- Example 1
 ```javascript
 return someData.json().cleanup(...).filter(...).map(...).doSomething().finalizeTheData();
-
+```
+- Example 2
+```javascript
 Promise.resolve(someData).then(...).then(...).catch(...);
 ```
 
