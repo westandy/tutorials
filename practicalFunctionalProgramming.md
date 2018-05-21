@@ -18,12 +18,14 @@
 return someData.json().cleanup(...).filter(...).map(...).doSomething().finalizeTheData();
 ```
 - Example 2
-```javascript
+```
+javascript
 Promise.resolve(someData).then(...).then(...).catch(...);
 ```
 
 ## Pipelines
-```javascript
+```
+javascript
 renderATitle(turnSentenceIntoTitle(readIn(someData)));
 ```
 
@@ -128,8 +130,34 @@ console.log(comp.render()); // My Props: yeah!, My State: 1
 comp.decrement();
 console.log(comp.render()); // My Props: yeah!, My State: 0
 ```
-## Partial Application
+## Partial Application (PA)
 - You apply some of the required parameters of a function and return a function that takes the rest of the parameters.
+
+### Not PA
+```javascript
+function turnArrayInto(func = () => {},list = []) {
+        return list.map(func);
+}
+
+const apples = ['golden delicious','red','fuji'];
+const orangeFunc = item => 'red naval';
+const oranges = turnArrayInto(orangeFunc,apples);
+console.log('Oranges',oranges); // ['red naval','red naval','red naval']
+```
+
+### With PA
+```javascript
+function partialTurnArrayInto(func) {
+        return function(list) {
+                return turnArrayInto(func,list);
+        }
+}
+const apples = ['golden delicious','red','fuji'];
+const orangeFunc = item => 'red naval';
+const turnIntoOranges = partialTurnArrayInto(orangeFunc);
+const oranges = turnIntoOranges(apples);
+console.log('Oranges',oranges); // ['red naval','red naval','red naval']
+```
 
 ## Currying 
 
