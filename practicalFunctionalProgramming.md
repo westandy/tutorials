@@ -163,7 +163,8 @@ console.log('Oranges',oranges); // ['red naval','red naval','red naval']
 
 ### PA In React
 
- - we use it in event handlers in our render methods:
+ - We can use Partial Application in event handlers in our render methods
+ 
 ```javascript
 ...
 someOnClickMethod(someData,someOtherData) {
@@ -172,7 +173,7 @@ someOnClickMethod(someData,someOtherData) {
 
 render() {
   ...
-  onClick={(e) => this.someOnClickMethod(e.someData,someOtherData)}
+  onClick={(e) => {this.someOnClickMethod(e.someData,someOtherData);}}
   ...
 }
 ```
