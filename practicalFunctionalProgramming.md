@@ -78,7 +78,7 @@ const comp = /*new*/ MyClassComponent({stuff:'yeah!'});
 console.log(comp()); // This is printing out props: yeah!
 ```
 
-#### My Stateful Class Component
+#### Stateful Class Component
 ```javascript
 function MyStatefulClassComponent (props = {stuff:''}) {
    // Constructor :
