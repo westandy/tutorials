@@ -9,7 +9,7 @@ const first = list[0]; // imperative
 const firstElem = firstElement(list); // declarative
 ```
 
-## Functional Specific Things:
+## Familiar Functional Concepts:
 1) Higher Order Functions 
    - functions that take functions as arguments
    - see `map, filter, reduce`
@@ -32,9 +32,9 @@ console.log(answer); // 2
 
 - In this example, we "bind" `10` to `d` when we create the function `divideBy10`.  We can say `10` is "closed" to `divideBy10`.
 
-## React and Closures
+### React and Closures
 
-### Stateless Functional Component:
+#### Stateless Functional Component:
 ```javascript
 const MyFunctionalComponent = (props = {stuff:''}) => {
    return function () { // render
@@ -46,7 +46,7 @@ const comp = MyFunctionalComponent({stuff:'yeah!'});
 console.log(comp()); // This is printing out props: yeah!
 ```
 
-### Stateless Class Component:
+#### Stateless Class Component:
 ```javascript
 function MyClassComponent (props = {stuff:''}) {
    // Constructor :
@@ -71,7 +71,7 @@ const comp = /*new*/ MyClassComponent({stuff:'yeah!'});
 console.log(comp()); // This is printing out props: yeah!
 ```
 
-### My Stateful Class Component
+#### My Stateful Class Component
 ```javascript
 function MyStatefulClassComponent (props = {stuff:''}) {
    // Constructor :
@@ -117,6 +117,9 @@ console.log(comp.render()); // My Props: yeah!, My State: 1
 comp.decrement();
 console.log(comp.render()); // My Props: yeah!, My State: 0
 ```
+## Partial Application
+
+## Currying 
 
 ## Immutable Data
 - Seriously, why do we care? 
@@ -127,12 +130,12 @@ console.log(comp.render()); // My Props: yeah!, My State: 0
 2) ```javascript map``` - create a new array of apples from an array of oranges
 3) ```javascript reduce``` - create a new elephant from a list of mice
 
-#### This is why we care:
+### This is why we care:
 In all cases, the existing list is not modified, and the new data is created when it is needed. 
 
-#### An Example:
+### An Example:
 
-##### Non-Functional Approach:
+#### Non-Functional Approach:
 ```javascript
 let someArray = [];
 
@@ -144,14 +147,14 @@ return someArray = [];
 ```
 
 
-##### Functional Approach:
+#### Functional Approach:
 ```javascript
 return someListOfData.reduce((accumulator,data) => accumulator = accumulate(data),[]);
 ```
 
 
 
-# References
+## References
 - React Components & createReactClass - https://reactjs.org/docs/react-without-es6.html
 - A Practical Introduction to Functional Programming - https://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming
 - Functional JavaScript by Michael Fogus
