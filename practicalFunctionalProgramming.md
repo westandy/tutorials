@@ -18,14 +18,12 @@
 return someData.json().cleanup(...).filter(...).map(...).doSomething().finalizeTheData();
 ```
 - Example 2
-```
-javascript
+```javascript
 Promise.resolve(someData).then(...).then(...).catch(...);
 ```
 
 ## Pipelines
-```
-javascript
+```javascript
 renderATitle(turnSentenceIntoTitle(readIn(someData)));
 ```
 
