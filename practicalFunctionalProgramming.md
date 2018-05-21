@@ -7,10 +7,17 @@
 2) Lambda functions 
    - nameless functions to give higher order functions
    
-## Pipelines/Chaining
+## Chaining
 - using functions as building blocks, we create 'chains' of methods:
 ```javascript
 return someData.json().cleanup(...).filter(...).map(...).doSomething().finalizeTheData();
+
+Promise.resolve(someData).then(...).then(...).catch(...);
+```
+
+## Pipelines
+```javascript
+renderATitle(turnSentenceIntoTitle(readIn(someData)));
 ```
 
 ## Closures 
