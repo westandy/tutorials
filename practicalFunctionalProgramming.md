@@ -191,14 +191,14 @@ render() {
 
 ### First Example
 ```javascript
-function curry2(func) {
+function curry(func) {
   return function(secondArg) {
     return function(firstArg) {
       return func(firstArg, secondArg);
     };
   };
 }
-const parseBinary = curry2(parseInt)(2);
+const parseBinary = curry(parseInt)(2);
 
 console.log(parseBinary('111'));  // 7
 console.log(parseBinary('10'));   // 2
@@ -207,13 +207,13 @@ console.log(parseBinary('10'));   // 2
 ### Second Example
 
 ```javascript
-function curry(func) {
+function curry2(func) {
   return function(arg) {
     return func(arg);
   };
 }
 console.log(['11', '11', '11', '11'].map(parseInt));         // [ 11, NaN, 3, 4 ]
-console.log(['11', '11', '11', '11'].map(curry(parseInt)));  // [ 11, 11, 11, 11 ]
+console.log(['11', '11', '11', '11'].map(curry2(parseInt)));  // [ 11, 11, 11, 11 ]
 ```
 
 ## Immutable Data
