@@ -241,3 +241,4 @@ return someListOfData.reduce((accumulator,data) => accumulate(data),[]);
 - Functional JavaScript by Michael Fogus
 - Understanding JavaScript Closures - http://javascriptissexy.com/understand-javascript-closures-with-ease/
 - Closures, Partial Application and Currying: Effective Functional JavaScript - https://hackernoon.com/ingredients-of-effective-functional-javascript-closures-partial-application-and-currying-66afe055102a
+- My Working Code - https://git.healthgrades.com/awestmeyer/kata
