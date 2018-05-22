@@ -53,79 +53,64 @@ console.log(answer); // 2
 
 #### Stateless Functional Component:
 ```javascript
-const MyFunctionalComponent = (props = {stuff:''}) => {
-   return function () { // render
-      const {stuff} = props;
-      return `This is printing out props: ${stuff}`;
-   }
-}
-const comp = MyFunctionalComponent({stuff:'yeah!'});
+const MyFunctionalComponent = (props = { stuff: '' }) => {
+  return function() { // render
+    const { stuff } = props;
+    return `This is printing out props: ${stuff}`;
+  };
+};
+const comp = MyFunctionalComponent({ stuff: 'yeah!' });
 console.log(comp()); // This is printing out props: yeah!
 ```
 
 #### Stateless Class Component:
 ```javascript
-function MyClassComponent (props = {stuff:''}) {
-   // Constructor :
-   if ( !(this instanceof MyClassComponent) ) {
-        return new MyClassComponent(props);
-   }
+function MyClassComponent(props = { stuff: '' }) {
+  // Constructor :
+  this.props = props;
+  // End Constructor
 
-   this.props = props;
-   // End Constructor
-
-   this.render = function() {
-      const {stuff} = this.props;
-      return `This is printing out props: ${stuff}`;
-   }
-   this.render = this.render.bind(this);
-
-   // Render method
-   return this.render;
+  // render
+  return function() {
+    const { stuff } = this.props;
+    return `This is printing out props: ${stuff}`;
+  };
 }
 
-const comp = /*new*/ MyClassComponent({stuff:'yeah!'});
+const comp = MyClassComponent({ stuff: 'yeah!' });
 console.log(comp()); // This is printing out props: yeah!
 ```
 
 #### Stateful Class Component
 ```javascript
-function MyStatefulClassComponent (props = {stuff:''}) {
-   // Constructor :
-   if ( !(this instanceof MyStatefulClassComponent) ) {
-        return new MyStatefulClassComponent(props);
-   }
+function MyStatefulClassComponent(props = { stuff: '' }) {
+  // Constructor :
+  this.props = props;
+  this.state = { count: 0 };
+  // End Constructor
 
-   this.props = props;
-   this.state = { count: 0 };
-   // End Constructor
+  const increment = () => {
+    this.state.count++;
+  };
 
-   this.increment = () => {
-      this.state.count++;
-   };
-   this.increment = this.increment.bind(this);
+  const decrement = () => {
+    this.state.count--;
+  };
 
-   this.decrement = () => {
-      this.state.count--;
-   };
-   this.decrement = this.decrement.bind(this);
-
-   this.render = function() {
-      const {stuff} = this.props;
-      const {count} = this.state;
-      return `My Props: ${stuff}, My State: ${this.state.count} `;
-   }
-   this.render = this.render.bind(this);
-
-   // Render method
-   return {
-      render:this.render,
-      increment:this.increment,
-      decrement:this.decrement
-   };
+  const render = () => {
+    const { stuff } = this.props;
+    const { count } = this.state;
+    return `My Props: ${stuff}, My State: ${this.state.count} `;
+  };
+  // Render method
+  return {
+    render,
+    increment,
+    decrement
+  };
 }
 
-const comp = /*new*/ MyStatefulClassComponent({stuff:'yeah!'});
+const comp = /*new*/ MyStatefulClassComponent({ stuff: 'yeah!' });
 console.log(comp.render()); // My Props: yeah!, My State: 0
 
 comp.increment();
