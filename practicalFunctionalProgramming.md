@@ -159,7 +159,8 @@ console.log('Oranges',oranges); // ['red naval','red naval','red naval']
  
 ```javascript
 class MyComponent extends React.Component {
-  partialHandleLinkClick(type, activeType){
+  partialHandleLinkClick(type){
+    const { activeType } = this.props;
     return function(e) {
       const hasKeyboardModifier = e.ctrlKey || e.shiftKey || e.altKey || e.metaKey;
       updateType(type, activeType, hasKeyboardModifier);
@@ -172,7 +173,7 @@ class MyComponent extends React.Component {
         {
           types.map( (type, i) => {
             <a key={i} href="#"
-              onClick={this.partialHandleLinkClick(type, this.props.activeType)}>
+              onClick={this.partialHandleLinkClick(type)}>
               {type}
             </a>
           })
