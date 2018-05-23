@@ -204,7 +204,6 @@ console.log(parseBinary('10'));   // 2
 ```
 
 ### Second Example
-
 ```javascript
 function curry2(func) {
   return function(arg) {
@@ -248,7 +247,7 @@ return someArray = [];
 
 #### Functional Approach:
 ```javascript
-return someListOfData.reduce((accumulator,data) => accumulate(data),[]);
+return someListOfData.reduce((accumulator,data) => accumulate(data,accumulator),[]);
 ```
 
 ### Some Reasons why we may care about Immutable Data (not-exhaustive):
