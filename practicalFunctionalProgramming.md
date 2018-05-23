@@ -37,12 +37,13 @@ renderATitle(turnSentenceIntoTitle(readIn(someData)));
 - Bind data or methods to a function only to use them later 
 
 ```javascript
-const divideBy = d => n => n/d;
-
+function divideBy(d) {
+  return function(n) {
+    return n / d;
+  };
+}
 const divideBy10 = divideBy(10);
-
 const answer = divideBy10(20);
-
 console.log(answer); // 2
 ```
 
@@ -214,9 +215,19 @@ console.log(['11', '11', '11', '11'].map(parseInt));         // [ 11, NaN, 3, 4 
 console.log(['11', '11', '11', '11'].map(curry2(parseInt)));  // [ 11, 11, 11, 11 ]
 ```
 
-## Immutable Data
-- Seriously, why do we care? 
+### Third Example
+```javascript
+// Revisited from Closures
+function divideNByD(n, d) {
+  return n / d;
+}
 
+const divideBy10 = curry(divideNByD)(10);
+const answer = divideBy10(20);
+console.log(answer);
+```
+
+## Immutable Data
 - Remember those higher order functions?
 
 1) ```javascript filter``` - create a new list with equal or fewer items
