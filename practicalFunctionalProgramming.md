@@ -226,7 +226,7 @@ function divideNByD(n, d) {
 
 const divideBy10 = curry2(divideNByD)(10);
 const answer = divideBy10(20);
-console.log(answer);
+console.log(answer); // 2
 ```
 
 ## Immutable Data
