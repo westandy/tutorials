@@ -157,15 +157,28 @@ console.log('Oranges',oranges); // ['red naval','red naval','red naval']
  - We can use Partial Application in event handlers in our render methods
  
 ```javascript
-...
-someOnClickMethod(someData,propData) {
-  ...
-}
-
-render() {
-  ...
-  onClick={(e) => {this.someOnClickMethod(e.someData,this.props.data);}}
-  ...
+class MyComponent extends React.Component {
+  partialHandleLinkClick(type, activeType){
+    return function(e) {
+      const hasKeyboardModifier = e.ctrlKey || e.shiftKey || e.altKey || e.metaKey;
+      updateType(type, activeType, hasKeyboardModifier);
+    };
+  }
+  render() {
+    const types = [ 'Foo', 'Bar', 'Baz' ];
+    return (
+      <div>
+        {
+          types.map( (type, i) => {
+            <a key={i} href="#"
+              onClick={this.partialHandleLinkClick(type, this.props.activeType)}>
+              {type}
+            </a>
+          })
+        }
+      </div>
+    );
+  }
 }
 ```
 
