@@ -245,7 +245,7 @@ let someArray = [];
    someListOfData...
    someArray.push(...data);
    ...
-return someArray = [];
+return someArray;
 ```
 
 #### Functional Approach:
