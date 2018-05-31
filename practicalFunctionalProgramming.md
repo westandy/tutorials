@@ -258,8 +258,9 @@ return someListOfData.reduce((accumulator,data) => accumulate(data,accumulator),
 2) Mutating data opens us up for bugs, in the same vein as do stateful components, objects, services, etc. do
 3) Functions that do not mutate their parameters are easy to test
 4) Immutability makes our methods and applications deterministic
-5) Why else would we care?
 
+## Side Effects
+1) What is a Side Effect: A function or expression is said to have a side effect if it modifies some state outside its scope or has an observable interaction with its calling functions or the outside world besides returning a value.
 
 ## References
 - React Components & createReactClass - https://reactjs.org/docs/react-without-es6.html
@@ -268,3 +269,4 @@ return someListOfData.reduce((accumulator,data) => accumulate(data,accumulator),
 - Understanding JavaScript Closures - http://javascriptissexy.com/understand-javascript-closures-with-ease/
 - Closures, Partial Application and Currying: Effective Functional JavaScript - https://hackernoon.com/ingredients-of-effective-functional-javascript-closures-partial-application-and-currying-66afe055102a
 - My Working Code - https://git.healthgrades.com/awestmeyer/kata
+- Side Effects - https://dzone.com/articles/side-effects-1
