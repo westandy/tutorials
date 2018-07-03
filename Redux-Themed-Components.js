@@ -28,12 +28,12 @@ export default connect(mapStateToProps, mapDispatchToProps);
 
 // in a component file
 
-import userContainer from '../../some/path/userContainer
+import userContainer from '../../some/path/userContainer';
 
 const userProfile = (props) => {
     return (
          <h1>Welcome, {props.email}</h1>
-     )
+     );
 }
 
 export default userContainer(userProfile);
