@@ -29,7 +29,7 @@ export class ValuesPipe implements PipeTransform {
 }
 ```
 
-## Object Keys
+## Reduce the Object to something else
 ```javascript
 import { Pipe, PipeTransform } from '@angular/core';
 
